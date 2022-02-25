@@ -1,0 +1,7 @@
+@import 'typography.scss';
+@import 'variables.scss';
+
+body {
+    background-color: var(--primary-color);
+    font-family: var(--font-normal);
+}

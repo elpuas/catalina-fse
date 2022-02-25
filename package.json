@@ -1,0 +1,22 @@
+{
+  "name": "Catalina",
+  "version": "1.0.0",
+  "description": "FSE Catalina",
+  "main": "index.js",
+  "scripts": {
+    "build": "wp-scripts build",
+    "start": "wp-scripts start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alfredo Navas",
+  "license": "ISC",
+  "devDependencies": {
+    "@wordpress/scripts": "^13.0.3",
+    "css-loader": "^5.1.0",
+    "mini-css-extract-plugin": "^1.3.9",
+    "sass-loader": "^11.0.1"
+  },
+  "dependencies": {
+    "node-sass": "^4.14.1"
+  }
+}
