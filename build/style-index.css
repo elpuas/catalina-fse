@@ -1,36 +1,65 @@
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/@wordpress/scripts/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/@wordpress/scripts/node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/scss/style.scss ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************/
 @font-face {
   font-family: "Inter";
   font-weight: 500;
   font-style: normal;
-  src: url(fonts/Inter-Medium.d5afc4bd.woff2); }
-
+  src: url(fonts/Inter-Medium.d5afc4bd.woff2);
+}
 @font-face {
   font-family: "Inter Bold";
   font-weight: 700;
   font-style: normal;
-  src: url(fonts/Inter-Medium.d5afc4bd.woff2); }
-
+  src: url(fonts/Inter-Bold.36a650f4.woff2);
+}
 @font-face {
   font-family: "Inter Black";
   font-weight: 900;
   font-style: normal;
-  src: url(fonts/Inter-Medium.d5afc4bd.woff2); }
-
+  src: url(fonts/Inter-Black.15ca31c0.woff2);
+}
 :root {
-  --primary-color:   #D8FF00;
+  --primary-color: #D8FF00;
   --secondary-color: #5E6F00;
-  --tertiary-color:  #B6D600;
-  --white-color:     #FFF;
-  --black-color:     #333333;
-  --font-normal:     'Inter', sans-serif;
-  --font-bold:       'Inter Bold', sans-serif;
-  --font-black:      'Inter Black', sans-serif; }
+  --tertiary-color: #B6D600;
+  --white-color: #FFF;
+  --black-color: #333333;
+  --font-normal: "Inter", sans-serif;
+  --font-bold: "Inter Bold", sans-serif;
+  --font-black: "Inter Black", sans-serif;
+  --leading-loose: 34px;
+  --container: 1152px;
+}
 
 body {
-  background-color: #D8FF00;
   background-color: var(--primary-color);
-  font-family: 'Inter', sans-serif;
-  font-family: var(--font-normal); }
+  font-family: var(--font-normal);
+}
 
+.wp-site-blocks {
+  max-width: var(--container);
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-black);
+  font-weight: 900;
+}
+
+p {
+  font-family: var(--font-normal);
+  line-height: var(--leading-loose);
+}
+p strong {
+  font-family: var(--font-bold);
+}
+
+strong {
+  color: var(--tertiary-color);
+}
 
 /*# sourceMappingURL=style-index.css.map*/

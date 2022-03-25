@@ -34,3 +34,14 @@ function scripts() {
 	wp_enqueue_script( 'catalina-scripts', get_template_directory_uri() . '/build/index.js', $asset_file['dependencies'], filemtime( $asset_file_time ), true );
 }
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\scripts' );
+
+
+/**
+ * Enqueue editor styles.
+ */
+function editor_styles() {
+	add_theme_support( 'editor-styles' );
+	add_editor_style( 'build/index.css' );
+}
+
+add_action( 'after_setup_theme', __NAMESPACE__ . '\editor_styles' );

@@ -1,0 +1,30 @@
+body {
+    background-color: var(--primary-color);
+    font-family: var(--font-normal);
+}
+
+.wp-site-blocks {
+    max-width: var(--container);
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--font-black);
+    font-weight: 900;
+}
+
+p {
+    font-family: var(--font-normal);
+    line-height: var(--leading-loose);
+
+    strong {
+        font-family: var(--font-bold);
+    }
+}
+
+strong {
+    color: var(--tertiary-color);
+}

@@ -78,27 +78,7 @@
 					"name": "Black"
 				}
 			],
-			"text": false
-		},
-		"custom": {
-			"spacing": {
-				"small": "max(1.25rem, 5vw)",
-				"medium": "clamp(2rem, 8vw, calc(4 * var(--wp--style--block-gap)))",
-				"large": "clamp(4rem, 10vw, 8rem)",
-				"outer": "var(--wp--custom--spacing--small, 1.25rem)"
-			},
-			"typography": {
-				"fontSize": {
-					"gigantic": "clamp(3rem, 6vw, 4rem)",
-					"colossal": "clamp(4rem, 8vw, 6.25rem)"
-				},
-				"lineHeight": {
-					"tiny": 1.15,
-					"small": 1.2,
-					"medium": 1.4,
-					"normal": 1.6
-				}
-			}
+			"text": true
 		},
 		"layout": {
 			"contentSize": "952px",
@@ -116,7 +96,23 @@
 		"typography": {
 			"customFontSize": true,
 			"dropCap": false,
-			"fontFamilies": [],
+			"fontFamilies": [
+				{
+					"fontFamily": "Inter",
+					"slug": "inter",
+					"name": "Inter"
+				},
+				{
+					"fontFamily": "Inter Bold",
+					"slug": "inter-bold",
+					"name": "Inter Bold"
+				},
+				{
+					"fontFamily": "Inter Black",
+					"slug": "inter-black",
+					"name": "Inter Black"
+				}
+			],
 			"fontSizes": [
 				{
 					"name": "Hero",
@@ -150,11 +146,33 @@
 				}
 			],
 			"fontStyle": false,
-			"fontWeight": true,
+			"fontWeight": false,
 			"letterSpacing": true,
 			"lineHeight": false,
 			"textDecoration": false,
 			"textTransform": true
+		},
+		"blocks": {
+			"core/paragraph": {
+				"typography": {
+					"fontSizes": [
+						{
+							"name": "Base",
+							"size": "18px",
+							"slug": "base"
+						}
+					]
+				}
+			},
+
+			"core/button": {
+				"border": {
+					"customRadius": false
+				},
+				"typography": {
+					"customFontSize": false
+				}
+			}
 		}
 	},
 	"styles": {},
@@ -169,12 +187,7 @@
 			"name": "catalina-footer",
 			"title": "Footer",
 			"area": "footer"
-		},
-		{
-			"name": "catalina-query",
-			"title": "Query",
-			"area": "content"
 		}
-
-	]
+	],
+	"patterns": [ "hero" ]
 }
