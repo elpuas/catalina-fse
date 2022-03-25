@@ -1,6 +1,7 @@
 body {
     background-color: var(--primary-color);
     font-family: var(--font-normal);
+    color: var(--black-color);
 }
 
 .wp-site-blocks {
@@ -13,7 +14,10 @@ h2,
 h3,
 h4 {
     font-family: var(--font-black);
-    font-weight: 900;
+
+    strong {
+        color: var(--tertiary-color);
+    }
 }
 
 p {
@@ -23,8 +27,4 @@ p {
     strong {
         font-family: var(--font-bold);
     }
-}
-
-strong {
-    color: var(--tertiary-color);
 }

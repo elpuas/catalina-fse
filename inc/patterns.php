@@ -28,12 +28,22 @@ add_action( 'init', __NAMESPACE__ . '\catalina_register_pattern_categories', 9 )
  */
 function catalina_block_patterns() {
 	register_block_pattern(
-		'catalina/recent-posts',
+		'catalina/hero',
 		[
 			'categories'  => [ 'catalina-patterns' ],
 			'description' => _x( 'Hero Block Pattern.', 'Block pattern description', 'catalina' ),
 			'content'     => include get_stylesheet_directory() . '/patterns/hero.php',
 			'title'       => __( 'Hero', 'catalina' ),
+		]
+	);
+
+	register_block_pattern(
+		'catalina/cards',
+		[
+			'categories'  => [ 'catalina-patterns' ],
+			'description' => _x( 'A pattern to show the two latest posts cards.', 'Block pattern description', 'catalina' ),
+			'content'     => include get_stylesheet_directory() . '/patterns/cards.php',
+			'title'       => __( 'Cards', 'catalina' ),
 		]
 	);
 }

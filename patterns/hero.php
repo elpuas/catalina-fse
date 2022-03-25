@@ -9,7 +9,7 @@
 return <<<EOD
 <!-- wp:group {"tagName":"section","className":"ct-hero"} -->
 <section class="wp-block-group ct-hero"><!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase"}},"textColor":"secondary","fontSize":"section-content"} -->
-<p class="has-secondary-color has-text-color has-section-content-font-size" style="text-transform:uppercase">Veritatis Obcaecati Tenetur</p>
+<p class="has-secondary-color has-text-color has-section-content-font-size" style="text-transform:uppercase"><strong>Veritatis Obcaecati Tenetur</strong></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"style":{"typography":{"textTransform":"uppercase"}},"textColor":"secondary","fontSize":"hero"} -->

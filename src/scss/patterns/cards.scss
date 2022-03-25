@@ -1,0 +1,44 @@
+.ct-cards {
+    .wp-block-post-template {
+        .wp-block-post {
+            .ct-group {
+                display: flex;
+                min-height: 248px;
+                border-radius: 4px;
+
+                > .wp-block-group {
+                    align-content: space-between;
+                    display: flex;
+                    position: relative;
+                    width: 100%;
+                    margin-top: 0;
+
+                    &:first-child {
+                        padding: 16px;
+                    }
+                }
+
+                .wp-block-post-title {
+                    color: var(--primary-color);
+                    font-family: var(--font-normal);
+                    font-weight: 500;
+                    padding: 0;
+                }
+
+                .wp-block-post-terms {
+                    position: absolute;
+                    z-index: 10;
+                    right: 0;
+                    top: 0;
+                }
+
+                .wp-block-post-featured-image,
+                img {
+                    height: 100%;
+                    object-fit: cover;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

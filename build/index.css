@@ -35,6 +35,7 @@
 body {
   background-color: var(--primary-color);
   font-family: var(--font-normal);
+  color: var(--black-color);
 }
 
 .wp-site-blocks {
@@ -47,7 +48,12 @@ h2,
 h3,
 h4 {
   font-family: var(--font-black);
-  font-weight: 900;
+}
+h1 strong,
+h2 strong,
+h3 strong,
+h4 strong {
+  color: var(--tertiary-color);
 }
 
 p {
@@ -58,8 +64,39 @@ p strong {
   font-family: var(--font-bold);
 }
 
-strong {
-  color: var(--tertiary-color);
+.ct-cards .wp-block-post-template .wp-block-post .ct-group {
+  display: flex;
+  min-height: 248px;
+  border-radius: 4px;
+}
+.ct-cards .wp-block-post-template .wp-block-post .ct-group > .wp-block-group {
+  align-content: space-between;
+  display: flex;
+  position: relative;
+  width: 100%;
+  margin-top: 0;
+}
+.ct-cards .wp-block-post-template .wp-block-post .ct-group > .wp-block-group:first-child {
+  padding: 16px;
+}
+.ct-cards .wp-block-post-template .wp-block-post .ct-group .wp-block-post-title {
+  color: var(--primary-color);
+  font-family: var(--font-normal);
+  font-weight: 500;
+  padding: 0;
+}
+.ct-cards .wp-block-post-template .wp-block-post .ct-group .wp-block-post-terms {
+  position: absolute;
+  z-index: 10;
+  right: 0;
+  top: 0;
+}
+.ct-cards .wp-block-post-template .wp-block-post .ct-group .wp-block-post-featured-image,
+.ct-cards .wp-block-post-template .wp-block-post .ct-group img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
 }
 
 /*# sourceMappingURL=index.css.map*/
