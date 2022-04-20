@@ -17,7 +17,7 @@ function catalina_get_theme_include_files() {
 	return [
 		'inc/scripts.php', // Load styles and scripts.
 		'inc/patterns.php', // Gutenberg patterns for this theme.
-		'inc/cpts.php', // Custom post types for this theme.
+		'inc/block-admin.php', // Block Functions for this theme.
 	];
 }
 

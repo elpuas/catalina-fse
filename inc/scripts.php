@@ -45,3 +45,15 @@ function editor_styles() {
 }
 
 add_action( 'after_setup_theme', __NAMESPACE__ . '\editor_styles' );
+
+add_theme_support( 'align-wide' );
+
+
+function block_scripts_enqueue() {
+    wp_enqueue_script(
+        'block-variations',
+        get_template_directory_uri() . '/src/js/block-variations.js',
+		[ 'wp-i18n', 'wp-blocks', 'wp-dom-ready', 'wp-edit-post' ]
+    );
+}
+add_action( 'enqueue_block_editor_assets', __NAMESPACE__ . '\block_scripts_enqueue' );

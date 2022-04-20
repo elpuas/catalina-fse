@@ -175,8 +175,65 @@
 			}
 		}
 	},
-	"styles": {},
-	"customTemplates": [],
+	"styles": {
+		"color": {
+			"text": "var(--wp--preset--color--secondary)",
+			"background": "var(--wp--preset--color--primary)"
+		},
+		"typography": {
+			"fontSize": "var(--wp--preset--font-size--base)",
+			"fontFamily": "var(--wp--preset--font-family--inter)"
+		},
+		"elements": {
+			"link": {
+				"color": {
+					"text": "var(--wp--preset--color--tertiary)"
+				},
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--base)"
+				}
+			},
+			"h1": {
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--hero)"
+				}
+			},
+			"h2": {
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--section-header)"
+				}
+			}
+		},
+		"blocks": {
+			"core/heading": {
+				"color": {
+					"text": "var(--wp--preset--color--secondary)"
+				},
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--inter-black)"
+				}
+			},
+			"core/paragraph": {
+				"color": {
+					"text": "var(--wp--preset--color--secondary)"
+				}
+			},
+			"core/list": {
+				"color": {
+					"text": "var(--wp--preset--color--secondary)"
+				}
+			}
+		}
+	},
+	"customTemplates": [
+		{
+            "name": "about-template",
+            "title": "The About Template",
+            "postTypes": [
+                "page"
+            ]
+        }
+	],
 	"templateParts": [
 		{
 			"name": "catalina-header",
@@ -189,5 +246,5 @@
 			"area": "footer"
 		}
 	],
-	"patterns": [ "hero" ]
+	"patterns": [ "hero", "cards" ]
 }

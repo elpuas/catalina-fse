@@ -43,12 +43,6 @@ body {
   margin: 0 auto;
 }
 
-h1,
-h2,
-h3,
-h4 {
-  font-family: var(--font-black);
-}
 h1 strong,
 h2 strong,
 h3 strong,
@@ -62,6 +56,13 @@ p {
 }
 p strong {
   font-family: var(--font-bold);
+}
+
+.alignwide,
+.alignfull {
+  margin: 0 calc(50% - 50vw);
+  max-width: 100vw;
+  width: 100vw;
 }
 
 .ct-cards .wp-block-post-template .wp-block-post .ct-group {
