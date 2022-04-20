@@ -1,9 +1,3 @@
-body {
-    background-color: var(--primary-color);
-    font-family: var(--font-normal);
-    color: var(--black-color);
-}
-
 .wp-site-blocks {
     max-width: var(--container);
     margin: 0 auto;
@@ -13,15 +7,12 @@ h1,
 h2,
 h3,
 h4 {
-    // font-family: var(--font-black);
-
     strong {
         color: var(--tertiary-color);
     }
 }
 
 p {
-    font-family: var(--font-normal);
     line-height: var(--leading-loose);
 
     strong {

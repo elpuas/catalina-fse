@@ -168,9 +168,6 @@
 			"core/button": {
 				"border": {
 					"customRadius": false
-				},
-				"typography": {
-					"customFontSize": false
 				}
 			}
 		}
@@ -221,6 +218,26 @@
 			"core/list": {
 				"color": {
 					"text": "var(--wp--preset--color--secondary)"
+				}
+			},
+			"core/button": {
+				"color": {
+					"background": "var(--wp--preset--color--secondary)",
+					"text": "var(--wp--preset--color--primary)"
+				},
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--base)",
+					"fontFamily": "var(--wp--preset--font-family--inter)"
+				}
+			},
+			"core/group": {
+				"spacing": {
+					"padding": {
+						"top": "0px",
+						"right": "0px",
+						"bottom": "0px",
+						"left": "0px"
+					}
 				}
 			}
 		}

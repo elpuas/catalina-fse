@@ -32,10 +32,26 @@
   --container: 1152px;
 }
 
-body {
-  background-color: var(--primary-color);
-  font-family: var(--font-normal);
-  color: var(--black-color);
+.is-style-small-button {
+  position: relative;
+  display: flex;
+}
+.is-style-small-button::after {
+  background-color: var(--secondary-color);
+  content: "";
+  display: block;
+  height: 22px;
+  width: 22px;
+  -webkit-mask-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNiAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEuNzc0NyA4LjEyNDk5SDEyLjAxMzlMNy41NDA1MyAxMi4zOTVDNy4xODMwMyAxMi43MzYyIDcuMTgzMDMgMTMuMjk2MiA3LjU0MDUzIDEzLjYzNzVDNy44OTgwMyAxMy45Nzg3IDguNDc1NTMgMTMuOTc4NyA4LjgzMzAzIDEzLjYzNzVMMTQuODczOSA3Ljg3MTI0QzE1LjIzMTQgNy41Mjk5OSAxNS4yMzE0IDYuOTc4NzQgMTQuODczOSA2LjYzNzQ5TDguODQyMiAwLjg2MjQ5MkM4LjY3MDk0IDAuNjk4NjQ2IDguNDM4NDIgMC42MDY1NjcgOC4xOTU5NSAwLjYwNjU2N0M3Ljk1MzQ3IDAuNjA2NTY3IDcuNzIwOTYgMC42OTg2NDYgNy41NDk3IDAuODYyNDkyQzcuMTkyMiAxLjIwMzc0IDcuMTkyMiAxLjc1NDk5IDcuNTQ5NyAyLjA5NjI0TDEyLjAxMzkgNi4zNzQ5OUgxLjc3NDdDMS4yNzA1MyA2LjM3NDk5IDAuODU4MDMyIDYuNzY4NzQgMC44NTgwMzIgNy4yNDk5OUMwLjg1ODAzMiA3LjczMTI0IDEuMjcwNTMgOC4xMjQ5OSAxLjc3NDcgOC4xMjQ5OVoiIGZpbGw9IiM1RTZGMDAiLz4KPC9zdmc+Cg==);
+          mask-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNiAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEuNzc0NyA4LjEyNDk5SDEyLjAxMzlMNy41NDA1MyAxMi4zOTVDNy4xODMwMyAxMi43MzYyIDcuMTgzMDMgMTMuMjk2MiA3LjU0MDUzIDEzLjYzNzVDNy44OTgwMyAxMy45Nzg3IDguNDc1NTMgMTMuOTc4NyA4LjgzMzAzIDEzLjYzNzVMMTQuODczOSA3Ljg3MTI0QzE1LjIzMTQgNy41Mjk5OSAxNS4yMzE0IDYuOTc4NzQgMTQuODczOSA2LjYzNzQ5TDguODQyMiAwLjg2MjQ5MkM4LjY3MDk0IDAuNjk4NjQ2IDguNDM4NDIgMC42MDY1NjcgOC4xOTU5NSAwLjYwNjU2N0M3Ljk1MzQ3IDAuNjA2NTY3IDcuNzIwOTYgMC42OTg2NDYgNy41NDk3IDAuODYyNDkyQzcuMTkyMiAxLjIwMzc0IDcuMTkyMiAxLjc1NDk5IDcuNTQ5NyAyLjA5NjI0TDEyLjAxMzkgNi4zNzQ5OUgxLjc3NDdDMS4yNzA1MyA2LjM3NDk5IDAuODU4MDMyIDYuNzY4NzQgMC44NTgwMzIgNy4yNDk5OUMwLjg1ODAzMiA3LjczMTI0IDEuMjcwNTMgOC4xMjQ5OSAxLjc3NDcgOC4xMjQ5OVoiIGZpbGw9IiM1RTZGMDAiLz4KPC9zdmc+Cg==);
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+          mask-size: 100%;
+}
+.is-style-small-button .wp-block-button__link {
+  background: transparent;
+  color: var(--secondary-color);
 }
 
 .wp-site-blocks {
@@ -51,7 +67,6 @@ h4 strong {
 }
 
 p {
-  font-family: var(--font-normal);
   line-height: var(--leading-loose);
 }
 p strong {
@@ -65,35 +80,35 @@ p strong {
   width: 100vw;
 }
 
-.ct-cards .wp-block-post-template .wp-block-post .ct-group {
+.pattern-cards .wp-block-post-template .wp-block-post .pattern-group {
   display: flex;
   min-height: 248px;
   border-radius: 4px;
 }
-.ct-cards .wp-block-post-template .wp-block-post .ct-group > .wp-block-group {
+.pattern-cards .wp-block-post-template .wp-block-post .pattern-group > .wp-block-group {
   align-content: space-between;
   display: flex;
   position: relative;
   width: 100%;
   margin-top: 0;
 }
-.ct-cards .wp-block-post-template .wp-block-post .ct-group > .wp-block-group:first-child {
+.pattern-cards .wp-block-post-template .wp-block-post .pattern-group > .wp-block-group:first-child {
   padding: 16px;
 }
-.ct-cards .wp-block-post-template .wp-block-post .ct-group .wp-block-post-title {
+.pattern-cards .wp-block-post-template .wp-block-post .pattern-group .wp-block-post-title {
   color: var(--primary-color);
   font-family: var(--font-normal);
   font-weight: 500;
   padding: 0;
 }
-.ct-cards .wp-block-post-template .wp-block-post .ct-group .wp-block-post-terms {
+.pattern-cards .wp-block-post-template .wp-block-post .pattern-group .wp-block-post-terms {
   position: absolute;
   z-index: 10;
   right: 0;
   top: 0;
 }
-.ct-cards .wp-block-post-template .wp-block-post .ct-group .wp-block-post-featured-image,
-.ct-cards .wp-block-post-template .wp-block-post .ct-group img {
+.pattern-cards .wp-block-post-template .wp-block-post .pattern-group .wp-block-post-featured-image,
+.pattern-cards .wp-block-post-template .wp-block-post .pattern-group img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;

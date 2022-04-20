@@ -1,1 +1,20 @@
-<!-- wp:pattern {"slug":"catalina/hero"} /-->
+<!-- wp:template-part {"slug":"header"} /-->
+<!-- wp:cover {"useFeaturedImage":true,"dimRatio":50,"overlayColor":"black","className":"post-hero", "align":"full"} -->
+<div class="wp-block-cover alignfull post-hero"><span aria-hidden="true" class="wp-block-cover__background has-black-background-color has-background-dim"></span>
+    <div class="wp-block-cover__inner-container">
+        <!-- wp:post-terms {"term":"category"} /-->
+
+        <!-- wp:post-title {"textAlign":"left"} /-->
+
+        <!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
+        <div class="wp-block-group">
+            <!-- wp:post-author /-->
+
+            <!-- wp:post-date /-->
+        </div>
+        <!-- /wp:group -->
+    </div>
+</div>
+<!-- /wp:cover -->
+<!-- wp:post-content /-->
+<!-- wp:template-part {"slug":"footer"} /-->

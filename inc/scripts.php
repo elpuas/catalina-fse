@@ -8,6 +8,11 @@
 namespace catalina\inc;
 
 /**
+ * Theme Support.
+ */
+add_theme_support( 'align-wide' );
+
+/**
  * Enqueue scripts and styles.
  */
 function scripts() {
@@ -46,14 +51,11 @@ function editor_styles() {
 
 add_action( 'after_setup_theme', __NAMESPACE__ . '\editor_styles' );
 
-add_theme_support( 'align-wide' );
 
+function block_assets_scripts_enqueue() {
+	$block_asset_dependencies = [ 'wp-i18n', 'wp-blocks', 'wp-dom-ready', 'wp-edit-post' ];
 
-function block_scripts_enqueue() {
-    wp_enqueue_script(
-        'block-variations',
-        get_template_directory_uri() . '/src/js/block-variations.js',
-		[ 'wp-i18n', 'wp-blocks', 'wp-dom-ready', 'wp-edit-post' ]
-    );
+	wp_enqueue_script( 'block-variations', get_template_directory_uri() . '/src/js/block-variations.js', $block_asset_dependencies );
+	wp_enqueue_script( 'block-styles', get_template_directory_uri() . '/src/js/block-styles.js', $block_asset_dependencies );
 }
-add_action( 'enqueue_block_editor_assets', __NAMESPACE__ . '\block_scripts_enqueue' );
+add_action( 'enqueue_block_editor_assets', __NAMESPACE__ . '\block_assets_scripts_enqueue' );

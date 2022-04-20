@@ -6,13 +6,14 @@
  *
  * @package catalina
  */
+namespace catalina\inc;
 
 /**
  * Register Catalina Block Category.
  *
  * @return void
  */
-function catalina_block_categories( $categories ) {
+function block_categories( $categories ) {
     return array_merge(
         $categories,
         [
@@ -23,4 +24,5 @@ function catalina_block_categories( $categories ) {
         ]
     );
 }
-add_action( 'block_categories', 'catalina_block_categories', 10, 2 );
+
+add_action( 'block_categories', __NAMESPACE__ . '\block_categories', 10, 2 );
