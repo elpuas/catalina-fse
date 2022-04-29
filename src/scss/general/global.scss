@@ -31,3 +31,32 @@ p {
 .pattern-headline-with-cards {
     margin: 100px 0;
 }
+
+.float-left-width-30 {
+    float: left;
+    max-width: 33.3333%;
+    padding: 32px;
+}
+
+.float-left-width-50 {
+    float: left;
+    max-width: 50%;
+    padding: 32px;
+}
+
+.float-right-width-30 {
+    float: right;
+    max-width: 33.3333%;
+    padding: 32px;
+}
+
+.float-right-width-50 {
+    float: right;
+    max-width: 50%;
+    padding: 32px;
+}
+
+.float-none {
+    float: none;
+}
+

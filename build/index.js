@@ -38,10 +38,193 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _scss_editor_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./scss/editor.scss */ "./src/scss/editor.scss");
 /* harmony import */ var _scss_style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./scss/style.scss */ "./src/scss/style.scss");
 /* harmony import */ var _js_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./js/index.js */ "./src/js/index.js");
-/* harmony import */ var _js_index_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_js_index_js__WEBPACK_IMPORTED_MODULE_2__);
 
 
 
+
+/***/ }),
+
+/***/ "./src/js/block-filters.js":
+/*!*********************************!*\
+  !*** ./src/js/block-filters.js ***!
+  \*********************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _filters_block_add_attributes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./filters/block-add-attributes */ "./src/js/filters/block-add-attributes.js");
+/* harmony import */ var _filters_block_add_attributes__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_filters_block_add_attributes__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _filters_block_advanced_settings__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./filters/block-advanced-settings */ "./src/js/filters/block-advanced-settings.js");
+/* harmony import */ var _filters_block_add_block_float_class__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./filters/block-add-block-float-class */ "./src/js/filters/block-add-block-float-class.js");
+/* harmony import */ var _filters_block_add_block_float_class__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_filters_block_add_block_float_class__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+
+/***/ }),
+
+/***/ "./src/js/filters/block-add-attributes.js":
+/*!************************************************!*\
+  !*** ./src/js/filters/block-add-attributes.js ***!
+  \************************************************/
+/***/ (function() {
+
+/**
+ * WordPress Dependencies
+ */
+const {
+  addFilter
+} = wp.hooks;
+/**
+ * Add custom attribute for mobile visibility.
+ *
+ * @param {Object} settings Settings for the block.
+ *
+ * @return {Object} settings Modified settings.
+ */
+
+function addListBlockClassName(settings, name) {
+  if (name !== 'core/query') {
+    return settings;
+  }
+
+  settings.attributes = Object.assign(settings.attributes, {
+    cardAlign: {
+      type: 'string'
+    }
+  });
+  console.log('addListBlockClassName', settings);
+  return settings;
+}
+
+wp.hooks.addFilter('blocks.registerBlockType', 'catalina/addListBlockClassName', addListBlockClassName);
+
+/***/ }),
+
+/***/ "./src/js/filters/block-add-block-float-class.js":
+/*!*******************************************************!*\
+  !*** ./src/js/filters/block-add-block-float-class.js ***!
+  \*******************************************************/
+/***/ (function() {
+
+/**
+ * WordPress Dependencies
+ */
+const {
+  addFilter
+} = wp.hooks;
+/**
+ * Add custom element class in save element.
+ *
+ * @param {Object} extraProps     Block element.
+ * @param {Object} blockType      Blocks object.
+ * @param {Object} attributes     Blocks attributes.
+ *
+ * @return {Object} extraProps Modified block element.
+ */
+
+function applyExtraClass(extraProps, blockType, attributes) {
+  const {
+    cardAlign
+  } = attributes; //check if attribute exists for old Gutenberg version compatibility
+  //add class only when visibleOnMobile = false
+
+  if (typeof cardAlign !== 'undefined') {
+    extraProps.className = `${extraProps.className} ${cardAlign}`;
+  }
+
+  console.log('applyExtraClass', extraProps.className);
+  return extraProps;
+}
+
+addFilter('blocks.getSaveContent.extraProps', 'catalina/applyExtraClass', applyExtraClass);
+
+/***/ }),
+
+/***/ "./src/js/filters/block-advanced-settings.js":
+/*!***************************************************!*\
+  !*** ./src/js/filters/block-advanced-settings.js ***!
+  \***************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+
+
+/**
+ * WordPress Dependencies
+ */
+const {
+  __
+} = wp.i18n;
+const {
+  addFilter
+} = wp.hooks;
+const {
+  Fragment
+} = wp.element;
+const {
+  InspectorAdvancedControls
+} = wp.blockEditor;
+const {
+  createHigherOrderComponent
+} = wp.compose;
+const {
+  SelectControl
+} = wp.components;
+/**
+ * Add mobile visibility controls on Advanced Block Panel.
+ *
+ * @param {function} BlockEdit Block edit component.
+ *
+ * @return {function} BlockEdit Modified block edit component.
+ */
+
+const withAdvancedControls = createHigherOrderComponent(BlockEdit => {
+  return props => {
+    if ('core/query' !== props.name) {
+      return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(BlockEdit, props);
+    }
+
+    const {
+      attributes,
+      setAttributes,
+      isSelected
+    } = props;
+    const {
+      cardAlign
+    } = attributes;
+    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(BlockEdit, props), isSelected && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(InspectorAdvancedControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(SelectControl, {
+      label: "Float Alignment",
+      value: cardAlign,
+      options: [{
+        label: 'None',
+        value: 'float-none'
+      }, {
+        label: 'Float Left | Width 30%',
+        value: 'float-left-width-30'
+      }, {
+        label: 'Float Left | Width 50%',
+        value: 'float-left-width-50'
+      }, {
+        label: 'Float Right | Width 30%',
+        value: 'float-right-width-30'
+      }, {
+        label: 'Float Right | Width 50%',
+        value: 'float-right-width-50'
+      }],
+      onChange: newAlign => {
+        setAttributes({
+          cardAlign: newAlign
+        });
+        console.log('newAlign', cardAlign);
+      }
+    })));
+  };
+}, 'withAdvancedControls');
+addFilter('editor.BlockEdit', 'catalina/block-advanced-control', withAdvancedControls);
 
 /***/ }),
 
@@ -49,9 +232,23 @@ __webpack_require__.r(__webpack_exports__);
 /*!*************************!*\
   !*** ./src/js/index.js ***!
   \*************************/
-/***/ (function() {
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _block_filters__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./block-filters */ "./src/js/block-filters.js");
 
 
+/***/ }),
+
+/***/ "@wordpress/element":
+/*!*********************************!*\
+  !*** external ["wp","element"] ***!
+  \*********************************/
+/***/ (function(module) {
+
+"use strict";
+module.exports = window["wp"]["element"];
 
 /***/ })
 

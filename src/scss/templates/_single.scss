@@ -1,0 +1,60 @@
+.single {
+    .wp-block-template-part {
+        position: relative;
+
+        .header {
+            position: absolute;
+            width: 100%;
+            z-index: 10;
+            filter: brightness(200%);
+        }
+    }
+
+    .wp-block-cover {
+        &.post-hero {
+            .wp-block-cover__inner-container {
+                max-width: var(--container);
+                margin: auto;
+
+                .wp-block-group {
+                    display: inline-flex;
+                    align-items: center;
+
+                    .wp-block-post-author__avatar {
+                        .avatar {
+                            border-radius: 9999px;
+                        }
+                    }
+
+                    .wp-block-post-author__content {
+                        display: flex;
+                        align-items: center;
+
+                        .wp-block-post-author__name {
+                            color: var(--primary-color);
+                        }
+                    }
+
+                    .wp-block-post-date {
+                        time {
+                            color: var(--primary-color);
+                        }
+                    }
+                }
+            }
+
+            .wp-block-post-terms {
+                a {
+                    color: var(--primary-color);
+                    text-decoration: none;
+                }
+            }
+
+            .wp-block-post-title {
+                color: var(--primary-color);
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+        }
+    }
+}

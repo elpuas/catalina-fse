@@ -46,6 +46,16 @@ function catalina_block_patterns() {
 			'title'       => __( 'Cards', 'catalina' ),
 		]
 	);
+
+	register_block_pattern(
+		'catalina/headline-with-cards',
+		[
+			'categories'  => [ 'catalina-patterns' ],
+			'description' => _x( 'A pattern to show the two latest posts cards and a headline with a call to action', 'Block pattern description', 'catalina' ),
+			'content'     => include get_stylesheet_directory() . '/patterns/headline-with-cards.php',
+			'title'       => __( 'Headline with Cards', 'catalina' ),
+		]
+	);
 }
 
 add_action( 'init', __NAMESPACE__ . '\catalina_block_patterns', 10 );

@@ -11,9 +11,9 @@ return <<<EOD
 <section class="wp-block-query pattern-cards"><!-- wp:post-template -->
 <!-- wp:group {"backgroundColor":"secondary","className":"pattern-group"} -->
 <div class="wp-block-group pattern-group has-secondary-background-color has-background"><!-- wp:group {"layout":{"type":"flex","allowOrientation":false,"justifyContent":"left","flexWrap":"wrap"}} -->
-<div class="wp-block-group"><!-- wp:post-title {"level":3} /-->
+<div class="wp-block-group"><!-- wp:post-title {"level":3,"isLink":true} /-->
 
-<!-- wp:post-author /--></div>
+<!-- wp:post-author {"className":"pattern-card-author"} /--></div>
 <!-- /wp:group -->
 
 <!-- wp:group {"layout":{"type":"flex","allowOrientation":false}} -->

@@ -95,6 +95,74 @@ p strong {
   margin: 100px 0;
 }
 
+.float-left-width-30 {
+  float: left;
+  max-width: 33.3333%;
+  padding: 32px;
+}
+
+.float-left-width-50 {
+  float: left;
+  max-width: 50%;
+  padding: 32px;
+}
+
+.float-right-width-30 {
+  float: right;
+  max-width: 33.3333%;
+  padding: 32px;
+}
+
+.float-right-width-50 {
+  float: right;
+  max-width: 50%;
+  padding: 32px;
+}
+
+.float-none {
+  float: none;
+}
+
+.single .wp-block-template-part {
+  position: relative;
+}
+.single .wp-block-template-part .header {
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+  filter: brightness(200%);
+}
+.single .wp-block-cover.post-hero .wp-block-cover__inner-container {
+  max-width: var(--container);
+  margin: auto;
+}
+.single .wp-block-cover.post-hero .wp-block-cover__inner-container .wp-block-group {
+  display: inline-flex;
+  align-items: center;
+}
+.single .wp-block-cover.post-hero .wp-block-cover__inner-container .wp-block-group .wp-block-post-author__avatar .avatar {
+  border-radius: 9999px;
+}
+.single .wp-block-cover.post-hero .wp-block-cover__inner-container .wp-block-group .wp-block-post-author__content {
+  display: flex;
+  align-items: center;
+}
+.single .wp-block-cover.post-hero .wp-block-cover__inner-container .wp-block-group .wp-block-post-author__content .wp-block-post-author__name {
+  color: var(--primary-color);
+}
+.single .wp-block-cover.post-hero .wp-block-cover__inner-container .wp-block-group .wp-block-post-date time {
+  color: var(--primary-color);
+}
+.single .wp-block-cover.post-hero .wp-block-post-terms a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+.single .wp-block-cover.post-hero .wp-block-post-title {
+  color: var(--primary-color);
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 .pattern-cards .wp-block-post-template .wp-block-post .pattern-group {
   display: flex;
   min-height: 248px;
@@ -112,6 +180,7 @@ p strong {
 }
 .pattern-cards .wp-block-post-template .wp-block-post .pattern-group .wp-block-post-title {
   padding: 0;
+  width: 100%;
 }
 .pattern-cards .wp-block-post-template .wp-block-post .pattern-group .wp-block-post-title a {
   color: var(--primary-color);
