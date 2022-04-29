@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Hero Pattern.
+ * Cards Pattern.
  *
  * @package catalina
  */
