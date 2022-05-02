@@ -76,6 +76,16 @@ function catalina_block_patterns() {
 			'title'       => __( 'Page Hero', 'catalina' ),
 		]
 	);
+
+	register_block_pattern(
+		'catalina/blockquote',
+		[
+			'categories'  => [ 'catalina-patterns' ],
+			'description' => _x( 'A fancy blockquote pattern', 'Block pattern description', 'catalina' ),
+			'content'     => include get_stylesheet_directory() . '/patterns/blockquote.php',
+			'title'       => __( 'Blockquote', 'catalina' ),
+		]
+	);
 }
 
 add_action( 'init', __NAMESPACE__ . '\catalina_block_patterns', 10 );
