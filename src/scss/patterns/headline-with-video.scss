@@ -1,0 +1,12 @@
+.wp-block-columns {
+    &.pattern-headline-with-video {
+        .wp-block-column {
+            align-items: center;
+        }
+        .pattern-headline-content {
+            .has-section-header-font-size {
+                font-family: var(--font-bold);
+            }
+        }
+    }
+}

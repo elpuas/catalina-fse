@@ -57,3 +57,5 @@ function block_assets_scripts_enqueue() {
 	wp_enqueue_script( 'block-advanced-scripts', get_template_directory_uri() . '/build/index.js', $block_asset_dependencies, filemtime( $asset_file_time ), true );
 }
 add_action( 'enqueue_block_editor_assets', __NAMESPACE__ . '\block_assets_scripts_enqueue' );
+
+add_post_type_support( 'page', 'excerpt' );

@@ -56,6 +56,26 @@ function catalina_block_patterns() {
 			'title'       => __( 'Headline with Cards', 'catalina' ),
 		]
 	);
+
+	register_block_pattern(
+		'catalina/headline-with-video',
+		[
+			'categories'  => [ 'catalina-patterns' ],
+			'description' => _x( 'A pattern to show a embed video and a headline with a call to action', 'Block pattern description', 'catalina' ),
+			'content'     => include get_stylesheet_directory() . '/patterns/headline-with-video.php',
+			'title'       => __( 'Headline with Video', 'catalina' ),
+		]
+	);
+
+	register_block_pattern(
+		'catalina/page-hero',
+		[
+			'categories'  => [ 'catalina-patterns' ],
+			'description' => _x( 'A pattern to be use as a header with the page title, page excerpt and feature image', 'Block pattern description', 'catalina' ),
+			'content'     => include get_stylesheet_directory() . '/patterns/page-hero.php',
+			'title'       => __( 'Page Hero', 'catalina' ),
+		]
+	);
 }
 
 add_action( 'init', __NAMESPACE__ . '\catalina_block_patterns', 10 );

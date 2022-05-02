@@ -263,5 +263,5 @@
 			"area": "footer"
 		}
 	],
-	"patterns": [ "hero", "cards" ]
+	"patterns": [ "hero", "cards", "page-hero", "headline-with-cards" ]
 }

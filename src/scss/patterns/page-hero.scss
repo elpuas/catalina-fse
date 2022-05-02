@@ -1,0 +1,20 @@
+.pattern-page-hero {
+    .page-hero-meta {
+        .wp-block-post-excerpt__excerpt {
+            font-size: var(--wp--preset--font-size--section-header);
+            font-family: var(--wp--preset--font-family--inter-black);
+            line-height: 1.25;
+        }
+    }
+
+    .page-hero-feature-image {
+        .wp-block-post-featured-image {
+            height: 100%;
+
+            img {
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
