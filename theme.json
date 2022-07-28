@@ -213,6 +213,9 @@
 			"core/paragraph": {
 				"color": {
 					"text": "var(--wp--preset--color--secondary)"
+				},
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--base)"
 				}
 			},
 			"core/list": {
@@ -228,16 +231,6 @@
 				"typography": {
 					"fontSize": "var(--wp--preset--font-size--base)",
 					"fontFamily": "var(--wp--preset--font-family--inter)"
-				}
-			},
-			"core/group": {
-				"spacing": {
-					"padding": {
-						"top": "0px",
-						"right": "0px",
-						"bottom": "0px",
-						"left": "0px"
-					}
 				}
 			}
 		}
@@ -262,6 +255,5 @@
 			"title": "Footer",
 			"area": "footer"
 		}
-	],
-	"patterns": [ "hero", "cards", "page-hero", "headline-with-cards" ]
+	]
 }

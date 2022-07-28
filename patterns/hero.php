@@ -1,12 +1,12 @@
 <?php
-
 /**
- * Hero Pattern.
- *
- * @package catalina
+ * Title: Hero
+ * Slug: catalina/hero
+ * Block types: core/post-content
+ * Categories: catalina-patterns
  */
 
-return <<<EOD
+?>
 <!-- wp:group {"tagName":"section","className":"pattern-hero"} -->
 <section class="wp-block-group pattern-hero"><!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase"}},"textColor":"secondary","fontSize":"section-content"} -->
 <p class="has-secondary-color has-text-color has-section-content-font-size" style="text-transform:uppercase"><strong>Veritatis Obcaecati Tenetur</strong></p>
@@ -22,4 +22,3 @@ return <<<EOD
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></section>
 <!-- /wp:group -->
-EOD;

@@ -1,11 +1,12 @@
 <?php
 /**
- * Headline with Cards Pattern.
- *
- * @package catalina
+ * Title: Headline with Cards
+ * Slug: catalina/headline-with-cards
+ * Block types: core/post-content
+ * Categories: catalina-patterns
  */
 
-return <<<EOD
+?>
 <!-- wp:columns {"className":"pattern-headline-with-cards"} -->
 <div class="wp-block-columns pattern-headline-with-cards"><!-- wp:column {"className":"pattern-headline-col"} -->
 <div class="wp-block-column pattern-headline-col"><!-- wp:query {"queryId":0,"query":{"perPage":"2","pages":"1","offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false},"tagName":"section","className":"pattern-cards"} -->
@@ -45,4 +46,3 @@ return <<<EOD
 <!-- /wp:group --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns -->
-EOD;

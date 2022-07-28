@@ -1,11 +1,12 @@
 <?php
 /**
- * Headline with Cards Pattern.
- *
- * @package catalina
+ * Title: Headline with Video
+ * Slug: catalina/headline-with-video
+ * Block types: core/post-content
+ * Categories: catalina-patterns
  */
 
-return <<<EOD
+?>
 <!-- wp:columns {"className":"pattern-headline-with-video"} -->
 <div class="wp-block-columns pattern-headline-with-video"><!-- wp:column {"className":"pattern-headline-col"} -->
 <div class="wp-block-column pattern-headline-col"><!-- wp:embed {"providerNameSlug":"youtube","responsive":true} /--></div>
@@ -29,4 +30,3 @@ return <<<EOD
 <!-- /wp:group --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns -->
-EOD;
