@@ -116,17 +116,12 @@
 			"fontSizes": [
 				{
 					"name": "Hero",
-					"size": "96px",
+					"size": "clamp(4.75rem, 4.269230769230769rem + 2.403846153846154vw, 6rem)",
 					"slug": "hero"
 				},
 				{
-					"name": "Hero Mobile",
-					"size": "74px",
-					"slug": "hero-mobile"
-				},
-				{
 					"name": "Section Header",
-					"size": "42px",
+					"size": "clamp(2.25rem, 2.105769230769231rem + 0.7211538461538461vw, 2.625rem)",
 					"slug": "section-header"
 				},
 				{

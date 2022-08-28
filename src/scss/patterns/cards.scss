@@ -1,6 +1,12 @@
 .pattern-cards {
     .wp-block-post-template {
         .wp-block-post {
+            transform: translateY(0);
+            transition: all 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+            &:hover {
+                box-shadow: var(--wp--preset--color--secondary) 0px 10px 10px -10px;
+                transform: translateY(-10px);
+            }
             .pattern-group {
                 display: flex;
                 min-height: 248px;

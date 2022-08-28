@@ -12,8 +12,8 @@
 <p class="has-secondary-color has-text-color has-section-content-font-size" style="text-transform:uppercase"><strong>Veritatis Obcaecati Tenetur</strong></p>
 <!-- /wp:paragraph -->
 
-<!-- wp:heading {"style":{"typography":{"textTransform":"uppercase"}},"textColor":"secondary","fontSize":"hero"} -->
-<h2 class="has-secondary-color has-text-color has-hero-font-size" style="text-transform:uppercase">I code digital crafts <strong>for </strong>humans.</h2>
+<!-- wp:heading {"style":{"typography":{"textTransform":"uppercase"}},"textColor":"secondary"} -->
+<h1 class="has-secondary-color has-text-color" style="text-transform:uppercase">I code digital crafts <strong>for </strong>humans.</h1>
 <!-- /wp:heading -->
 
 <!-- wp:buttons -->
