@@ -1,5 +1,5 @@
 {
-	"name": "Catalina",
+	"name": "theme/catalina",
 	"version": "1.0",
 	"author": "ElPuas Digital Crafts",
 	"type": "theme",
@@ -12,5 +12,10 @@
 	},
 	"scripts": {
 		"test": "phpcs -p --standard=WordPress --extensions=php ."
+	},
+	"config": {
+		"allow-plugins": {
+			"dealerdirect/phpcodesniffer-composer-installer": true
+		}
 	}
 }
