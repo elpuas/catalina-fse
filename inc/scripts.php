@@ -45,13 +45,6 @@ function scripts() {
     );
 
     // Enqueue scripts.
-    wp_enqueue_script(
-        'catalina-scripts',
-        get_template_directory_uri() . '/build/index.js',
-        $asset_file['dependencies'],
-        $asset_file['version'],
-        true
-    );
 }
 
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\scripts');
