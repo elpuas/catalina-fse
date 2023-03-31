@@ -22,8 +22,6 @@ function addListBlockClassName( settings, name ) {
         }
     });
 
-    console.log('addListBlockClassName', settings);
-
     return settings;
 }
 

@@ -1,0 +1,21 @@
+{
+	"name": "theme/catalina",
+	"version": "1.0",
+	"author": "ElPuas Digital Crafts",
+	"type": "theme",
+	"license": "MIT",
+	"description": "Catalina is a clean and responsive theme, It's a perfect theme for personal blogs and portfolios.",
+	"require-dev": {
+		"dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
+		"wp-coding-standards/wpcs": "^2.3",
+		"phpcompatibility/phpcompatibility-wp": "^2.1"
+	},
+	"scripts": {
+		"test": "phpcs -p --standard=WordPress --extensions=php ."
+	},
+	"config": {
+		"allow-plugins": {
+			"dealerdirect/phpcodesniffer-composer-installer": true
+		}
+	}
+}

@@ -1,12 +1,12 @@
 <?php
-
 /**
- * Cards Pattern.
- *
- * @package catalina
+ * Title: Cards
+ * Slug: catalina/cards
+ * Block types: core/post-content
+ * Categories: catalina-patterns
  */
 
-return <<<EOD
+?>
 <!-- wp:query {"queryId":0,"query":{"perPage":"2","pages":"1","offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false},"tagName":"section","className":"pattern-cards"} -->
 <section class="wp-block-query pattern-cards"><!-- wp:post-template -->
 <!-- wp:group {"backgroundColor":"secondary","className":"pattern-group"} -->
@@ -24,4 +24,3 @@ return <<<EOD
 <!-- /wp:group -->
 <!-- /wp:post-template --></section>
 <!-- /wp:query -->
-EOD;

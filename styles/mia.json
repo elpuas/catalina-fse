@@ -1,0 +1,36 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/theme.json",
+    "version":2,
+    "title":"Mia",
+    "settings": {
+        "color": {
+            "palette": [
+                {
+                    "color": "#FFD4FF",
+                    "slug": "primary",
+                    "name": "Primary"
+                },
+                {
+                    "color": "#86002D",
+                    "slug": "secondary",
+                    "name": "Secondary"
+                },
+                {
+                    "color": "#FF9EE2",
+                    "slug": "tertiary",
+                    "name": "Tertiary"
+                },
+                {
+                    "color": "#FFF",
+                    "slug": "white",
+                    "name": "White"
+                },
+                {
+                    "color": "#333333",
+                    "slug": "black",
+                    "name": "Black"
+                }
+            ]
+        }
+    }
+}

@@ -16,13 +16,10 @@ function applyExtraClass( extraProps, blockType, attributes ) {
 
 	const { cardAlign } = attributes;
 
-	//check if attribute exists for old Gutenberg version compatibility
-	//add class only when visibleOnMobile = false
+	//check if the attribute exists.
 	if ( typeof cardAlign !== 'undefined' ) {
         extraProps.className = `${extraProps.className} ${cardAlign}`;
 	}
-
-    console.log('applyExtraClass', extraProps.className);
 
 	return extraProps;
 }

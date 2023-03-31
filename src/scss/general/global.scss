@@ -8,7 +8,7 @@ h2,
 h3,
 h4 {
     strong {
-        color: var(--tertiary-color);
+        color: var(--wp--preset--color--tertiary);
     }
 }
 
@@ -16,7 +16,7 @@ p {
     line-height: var(--leading-loose);
 
     strong {
-        font-family: var(--font-bold);
+        font-family: var(--wp--preset--font-family--inter-bold);
     }
 }
 
@@ -59,4 +59,3 @@ p {
 .float-none {
     float: none;
 }
-

@@ -1,12 +1,12 @@
 <?php
-
 /**
- * Hero Pattern.
- *
- * @package catalina
+ * Title: Page Hero
+ * Slug: catalina/page-hero
+ * Block types: core/post-content
+ * Categories: catalina-patterns
  */
 
-return <<<EOD
+?>
 <!-- wp:group {"tagName":"section","className":"pattern-page-hero"} -->
 <section class="wp-block-group pattern-page-hero"><!-- wp:columns -->
 <div class="wp-block-columns"><!-- wp:column {"className":"page-hero-meta"} -->
@@ -20,4 +20,3 @@ return <<<EOD
 <!-- /wp:column --></div>
 <!-- /wp:columns --></section>
 <!-- /wp:group -->
-EOD;

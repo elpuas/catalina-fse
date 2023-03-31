@@ -5,7 +5,7 @@
         align-items: center;
 
         &::after {
-            background-color: var(--secondary-color);
+            background-color: var(--wp--preset--color--secondary);
             content: '';
             display: block;
             height: 18px;
@@ -21,7 +21,7 @@
 
         .wp-block-button__link {
             background: transparent;
-            color: var(--secondary-color);
+            color: var(--wp--preset--color--secondary);
             padding-left: 0;
             padding-right: 16px;
         }

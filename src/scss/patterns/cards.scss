@@ -1,6 +1,12 @@
 .pattern-cards {
     .wp-block-post-template {
         .wp-block-post {
+            transform: translateY(0);
+            transition: all 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+            &:hover {
+                box-shadow: var(--wp--preset--color--secondary) 0px 10px 10px -10px;
+                transform: translateY(-10px);
+            }
             .pattern-group {
                 display: flex;
                 min-height: 248px;
@@ -23,8 +29,8 @@
                     width: 100%;
 
                     a {
-                        color: var(--primary-color);
-                        font-family: var(--font-normal);
+                        color: var(--wp--preset--color--primary);
+                        font-family: var(--wp--preset--font-family--inter);
                         font-size: 1.17em;
                         text-decoration: none;
                     }
@@ -39,7 +45,7 @@
                     a {
                         background-color: rgba(29,29,29,0.8);
                         padding: 4px 8px;
-                        font-family: var(--font-normal);
+                        font-family: var(--wp--preset--font-family--inter);
                         font-size: 16px;
                         border-bottom-left-radius: 8px;
                         border-top-right-radius: 8px;
@@ -64,7 +70,7 @@
                     }
 
                     .wp-block-post-author__name {
-                        color: var(--primary-color);
+                        color: var(--wp--preset--color--primary);
                     }
                 }
             }
