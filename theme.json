@@ -239,16 +239,5 @@
             ]
         }
 	],
-	"templateParts": [
-		{
-			"name": "catalina-header",
-			"title": "Header",
-			"area": "header"
-		},
-		{
-			"name": "catalina-footer",
-			"title": "Footer",
-			"area": "footer"
-		}
-	]
+	"templateParts": []
 }
