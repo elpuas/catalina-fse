@@ -1,0 +1,37 @@
+
+{
+    "$schema": "https://schemas.wp.org/trunk/theme.json",
+    "version":2,
+    "title":"Vercel",
+    "settings": {
+        "color": {
+            "palette": [
+                {
+                    "color": "#000000",
+                    "slug": "primary",
+                    "name": "Primary"
+                },
+                {
+                    "color": "#D8FF00",
+                    "slug": "secondary",
+                    "name": "Secondary"
+                },
+                {
+                    "color": "#a1a1a1",
+                    "slug": "tertiary",
+                    "name": "Tertiary"
+                },
+                {
+                    "color": "#FFF",
+                    "slug": "white",
+                    "name": "White"
+                },
+                {
+                    "color": "#333333",
+                    "slug": "black",
+                    "name": "Black"
+                }
+            ]
+        }
+    }
+}
