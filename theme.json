@@ -1,12 +1,12 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
-    "version":2,
+    "version":3,
 	"settings": {
 		"border": {
-			"color": false,
-			"radius": false,
-			"style": false,
-			"width": false
+			"color": true,
+			"radius": true,
+			"style": true,
+			"width": true
 		},
 		"color": {
 			"background": true,
@@ -95,6 +95,7 @@
 		},
 		"typography": {
 			"customFontSize": true,
+			"fluid": true,
 			"dropCap": false,
 			"fontFamilies": [
 				{
@@ -143,7 +144,7 @@
 			"fontStyle": false,
 			"fontWeight": false,
 			"letterSpacing": true,
-			"lineHeight": false,
+			"lineHeight": true,
 			"textDecoration": false,
 			"textTransform": true
 		},
@@ -234,9 +235,7 @@
 		{
             "name": "about-template",
             "title": "The About Template",
-            "postTypes": [
-                "page"
-            ]
+            "postTypes": ["page"]
         }
 	],
 	"templateParts": [
@@ -250,5 +249,13 @@
 			"name": "footer",
 			"title": "Footer"
 		}
+	],
+	"patterns": [
+		"blockquote",
+		"cards",
+		"headline-with-cards",
+		"headline-with-video",
+		"hero",
+		"page-hero"
 	]
 }
